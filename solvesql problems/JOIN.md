@@ -48,7 +48,7 @@ ORDER BY employees.employee_id;
 ```
 
 ### [작품이 없는 작가 찾기](https://solvesql.com/problems/artists-without-artworks/)
-```
+```sql
 SELECT 
 artists.artist_id AS artist_id,
 artists.name AS name
