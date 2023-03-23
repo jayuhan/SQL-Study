@@ -43,12 +43,11 @@ ORDER BY event_date_kst ASC;
 
 ### [버뮤다 삼각지대에 들어가버린 택배](https://solvesql.com/problems/shipment-in-bermuda/)
 ```sql
--- 푸는중
 SELECT
   DATE(order_delivered_carrier_date) AS delivered_carrier_date,
   COUNT(*) AS orders
 FROM olist_orders_dataset
-WHERE order_delivered_carrier_date BETWEEN '2017-01-01' AND '2017-01-31'
+WHERE DATE(order_delivered_carrier_date) BETWEEN '2017-01-01' AND '2017-01-31'
   AND order_delivered_customer_date IS NULL
 GROUP BY DATE(order_delivered_carrier_date)
 ORDER BY DATE(order_delivered_carrier_date) ASC;
